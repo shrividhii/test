@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "UserProfile";
+}
+
+<h2>UserProfile</h2>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link rel="stylesheet" href="/Butterfly/assets/css/style.css">
+</head>
+<body class="user-login">
+    <section>
+
+        <div>
+            <img src="~/Butterfly/user.jpg" class="userimg" alt="image">
+        </div>
+
+        <div class="offset-1 col-lg-10" id="bbtn">
+            <button class="btn2" onclick="logout()">Logout</button>
+        </div>
+    </section>
+    <script>
+        function logout()
+        {
+           window.history.forward();
+           window.location.href = '@Url.Action("Logout","User")';
+        }
+    </script>
+</body>
+</html>

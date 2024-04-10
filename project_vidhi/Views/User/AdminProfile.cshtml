@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "AdminProfile";
+}
+
+<h2>AdminProfile</h2>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="/Butterfly/assets/css/style.css">
+</head>
+<body class="admin">
+    <section>
+        <div>
+            <img src="~/Butterfly/user1.png" class="user1" alt="image">
+        </div>
+
+        <div class="offset-1 col-lg-10" id="bbtn">
+            <button class="btn2" onclick="logout()">Logout</button>
+        </div>
+
+        <div class="offset-1 col-lg-10" id="bbtn">
+            <button class="btn2" onclick="details()">Details</button>
+        </div>
+
+    </section>
+    <script>
+        function logout()
+        {
+            window.location.href = '@Url.Action("Logout","User")';
+        }
+
+        function details()
+        {
+            window.location.href = '@Url.Action("Details","User")';
+        }
+    </script>
+</body>
+    </html>

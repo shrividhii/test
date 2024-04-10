@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C651EA27-6C69-4733-A3F1-F603CCA85021}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>project_vidhi</RootNamespace>
+    <AssemblyName>project_vidhi</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44375</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=5.0.17.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.5.0.17\lib\netstandard2.0\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.5.0.0\lib\net461\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.5.0.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.5.0.1\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.5.0.2\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Channels, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Channels.8.0.0\lib\net462\System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoginAuthentication.cs" />
+    <Compile Include="PostgreSQLHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Butterfly\assets\css\style.css" />
+    <Content Include="Butterfly\assets\img\about.jpg" />
+    <Content Include="Butterfly\assets\img\apple-touch-icon.png" />
+    <Content Include="Butterfly\assets\img\clients\client-1.png" />
+    <Content Include="Butterfly\assets\img\clients\client-2.png" />
+    <Content Include="Butterfly\assets\img\clients\client-3.png" />
+    <Content Include="Butterfly\assets\img\clients\client-4.png" />
+    <Content Include="Butterfly\assets\img\clients\client-5.png" />
+    <Content Include="Butterfly\assets\img\clients\client-6.png" />
+    <Content Include="Butterfly\assets\img\clients\client-7.png" />
+    <Content Include="Butterfly\assets\img\clients\client-8.png" />
+    <Content Include="Butterfly\assets\img\counts-bg.jpg" />
+    <Content Include="Butterfly\assets\img\cta-bg.jpg" />
+    <Content Include="Butterfly\assets\img\favicon.png" />
+    <Content Include="Butterfly\assets\img\gallery\gallery-1.jpg" />
+    <Content Include="Butterfly\assets\img\gallery\gallery-2.jpg" />
+    <Content Include="Butterfly\assets\img\gallery\gallery-3.jpg" />
+    <Content Include="Butterfly\assets\img\gallery\gallery-4.jpg" />
+    <Content Include="Butterfly\assets\img\gallery\gallery-5.jpg" />
+    <Content Include="Butterfly\assets\img\gallery\gallery-6.jpg" />
+    <Content Include="Butterfly\assets\img\gallery\gallery-7.jpg" />
+    <Content Include="Butterfly\assets\img\gallery\gallery-8.jpg" />
+    <Content Include="Butterfly\assets\img\hero-img.png" />
+    <Content Include="Butterfly\assets\img\logo.png" />
+    <Content Include="Butterfly\assets\img\portfolio\portfolio-1.jpg" />
+    <Content Include="Butterfly\assets\img\portfolio\portfolio-2.jpg" />
+    <Content Include="Butterfly\assets\img\portfolio\portfolio-3.jpg" />
+    <Content Include="Butterfly\assets\img\portfolio\portfolio-4.jpg" />
+    <Content Include="Butterfly\assets\img\portfolio\portfolio-5.jpg" />
+    <Content Include="Butterfly\assets\img\portfolio\portfolio-6.jpg" />
+    <Content Include="Butterfly\assets\img\portfolio\portfolio-7.jpg" />
+    <Content Include="Butterfly\assets\img\portfolio\portfolio-8.jpg" />
+    <Content Include="Butterfly\assets\img\portfolio\portfolio-9.jpg" />
+    <Content Include="Butterfly\assets\img\portfolio\portfolio-details-1.jpg" />
+    <Content Include="Butterfly\assets\img\portfolio\portfolio-details-2.jpg" />
+    <Content Include="Butterfly\assets\img\portfolio\portfolio-details-3.jpg" />
+    <Content Include="Butterfly\assets\img\team\team-1.jpg" />
+    <Content Include="Butterfly\assets\img\team\team-2.jpg" />
+    <Content Include="Butterfly\assets\img\team\team-3.jpg" />
+    <Content Include="Butterfly\assets\img\team\team-4.jpg" />
+    <Content Include="Butterfly\assets\img\testimonials\testimonials-1.jpg" />
+    <Content Include="Butterfly\assets\img\testimonials\testimonials-2.jpg" />
+    <Content Include="Butterfly\assets\img\testimonials\testimonials-3.jpg" />
+    <Content Include="Butterfly\assets\img\testimonials\testimonials-4.jpg" />
+    <Content Include="Butterfly\assets\img\testimonials\testimonials-5.jpg" />
+    <Content Include="Butterfly\assets\js\main.js" />
+    <Content Include="Butterfly\assets\scss\Readme.txt" />
+    <Content Include="Butterfly\assets\vendor\bootstrap-icons\bootstrap-icons.css" />
+    <Content Include="Butterfly\assets\vendor\bootstrap-icons\bootstrap-icons.min.css" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-utilities.css" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-utilities.min.css" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap.rtl.css" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap.rtl.min.css" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\js\bootstrap.esm.js" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\js\bootstrap.esm.min.js" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Butterfly\assets\vendor\boxicons\css\animations.css" />
+    <Content Include="Butterfly\assets\vendor\boxicons\css\boxicons.css" />
+    <Content Include="Butterfly\assets\vendor\boxicons\css\boxicons.min.css" />
+    <Content Include="Butterfly\assets\vendor\boxicons\css\transformations.css" />
+    <Content Include="Butterfly\assets\vendor\boxicons\fonts\boxicons.svg" />
+    <Content Include="Butterfly\assets\vendor\glightbox\css\glightbox.css" />
+    <Content Include="Butterfly\assets\vendor\glightbox\css\glightbox.min.css" />
+    <Content Include="Butterfly\assets\vendor\glightbox\css\plyr.css" />
+    <Content Include="Butterfly\assets\vendor\glightbox\css\plyr.min.css" />
+    <Content Include="Butterfly\assets\vendor\glightbox\js\glightbox.js" />
+    <Content Include="Butterfly\assets\vendor\glightbox\js\glightbox.min.js" />
+    <Content Include="Butterfly\assets\vendor\isotope-layout\isotope.pkgd.js" />
+    <Content Include="Butterfly\assets\vendor\isotope-layout\isotope.pkgd.min.js" />
+    <Content Include="Butterfly\assets\vendor\php-email-form\validate.js" />
+    <Content Include="Butterfly\assets\vendor\purecounter\purecounter_vanilla.js" />
+    <Content Include="Butterfly\assets\vendor\swiper\swiper-bundle.min.css" />
+    <Content Include="Butterfly\assets\vendor\swiper\swiper-bundle.min.js" />
+    <Content Include="Butterfly\forms\Readme.txt" />
+    <Content Include="Butterfly\img.jpg" />
+    <Content Include="Butterfly\inner-page.html" />
+    <Content Include="Butterfly\portfolio-details.html" />
+    <Content Include="Butterfly\Readme.txt" />
+    <Content Include="Butterfly\user.jpg" />
+    <Content Include="Butterfly\user1.png" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Butterfly\.git\COMMIT_EDITMSG" />
+    <Content Include="Butterfly\.git\config" />
+    <Content Include="Butterfly\.git\description" />
+    <Content Include="Butterfly\.git\HEAD" />
+    <Content Include="Butterfly\.git\hooks\applypatch-msg.sample" />
+    <Content Include="Butterfly\.git\hooks\commit-msg.sample" />
+    <Content Include="Butterfly\.git\hooks\fsmonitor-watchman.sample" />
+    <Content Include="Butterfly\.git\hooks\post-update.sample" />
+    <Content Include="Butterfly\.git\hooks\pre-applypatch.sample" />
+    <Content Include="Butterfly\.git\hooks\pre-commit.sample" />
+    <Content Include="Butterfly\.git\hooks\pre-merge-commit.sample" />
+    <Content Include="Butterfly\.git\hooks\pre-push.sample" />
+    <Content Include="Butterfly\.git\hooks\pre-rebase.sample" />
+    <Content Include="Butterfly\.git\hooks\pre-receive.sample" />
+    <Content Include="Butterfly\.git\hooks\prepare-commit-msg.sample" />
+    <Content Include="Butterfly\.git\hooks\push-to-checkout.sample" />
+    <Content Include="Butterfly\.git\hooks\sendemail-validate.sample" />
+    <Content Include="Butterfly\.git\hooks\update.sample" />
+    <Content Include="Butterfly\.git\index" />
+    <Content Include="Butterfly\.git\info\exclude" />
+    <Content Include="Butterfly\.git\logs\HEAD" />
+    <Content Include="Butterfly\.git\logs\refs\heads\main" />
+    <Content Include="Butterfly\.git\objects\03\e5938cf2ce6f618f175bbc2f2e011b06a20772" />
+    <Content Include="Butterfly\.git\objects\04\e9185bd638bb11ef576be7b8439f2a7bdcb05e" />
+    <Content Include="Butterfly\.git\objects\05\c4e53c07da276a83b6fc98f24ad23d19b636ee" />
+    <Content Include="Butterfly\.git\objects\0b\62be14362fbe6bca7434401b999a0bc08b7e24" />
+    <Content Include="Butterfly\.git\objects\0c\8e9c47fbee85005a46859a102e89e3dc170d06" />
+    <Content Include="Butterfly\.git\objects\0f\de548bd4146e5eac4ddc2d5a6e013d7d981f0e" />
+    <Content Include="Butterfly\.git\objects\10\c2406ee5d96118cbeda1f7eb04f3089adf9a3b" />
+    <Content Include="Butterfly\.git\objects\12\0aa434f197956dc809253e0e53d050d32cf85f" />
+    <Content Include="Butterfly\.git\objects\17\61dc6cd29765c43e8eeb36b45b11dd3e7b0953" />
+    <Content Include="Butterfly\.git\objects\1a\5d65630b24445eadf1a660c18fdbb187031c68" />
+    <Content Include="Butterfly\.git\objects\1b\b409277a378bebaeb568750fb68869a3985918" />
+    <Content Include="Butterfly\.git\objects\1c\926af57ec9afa95b50095264c9e02e52f601d4" />
+    <Content Include="Butterfly\.git\objects\21\03919f4cb49080fc85bd7ed153b44e6f779bef" />
+    <Content Include="Butterfly\.git\objects\25\51e8f970ed14240428e5b7b1bd92a2b4ea2c4b" />
+    <Content Include="Butterfly\.git\objects\27\523851a73d3ee408f06adf27e601b31fb45f45" />
+    <Content Include="Butterfly\.git\objects\2c\432571bf261cebcb8c0d3e167102ac28c1990d" />
+    <Content Include="Butterfly\.git\objects\2c\c9833c801846028daabc22012b3aff37495be7" />
+    <Content Include="Butterfly\.git\objects\2c\d1f00f2e2d9415d8dbf3dba78297dc24afacd3" />
+    <Content Include="Butterfly\.git\objects\2d\71422372e74337f039c2d55d303b32d2211920" />
+    <Content Include="Butterfly\.git\objects\2e\8aa64e86b4cc760ea9b711548e2cef6508ffe0" />
+    <Content Include="Butterfly\.git\objects\2e\b483cb3d3d1e077967cd10424ca14063cc5c5a" />
+    <Content Include="Butterfly\.git\objects\31\c8d2542df839050d8b19670950e25ee90c0e3b" />
+    <Content Include="Butterfly\.git\objects\34\a6d2a14de8e886e38b0cf4c66d8ff06a8a09b8" />
+    <Content Include="Butterfly\.git\objects\36\21fb381ed1b40fb231915b951de6b54be1a738" />
+    <Content Include="Butterfly\.git\objects\36\f2d2254c110649d42d062da758a8694cfbbca2" />
+    <Content Include="Butterfly\.git\objects\38\465e5ae301b3ddefabfe22b188c4fee52182c0" />
+    <Content Include="Butterfly\.git\objects\38\82a8199be0701199474e2d943eef33e52a39ed" />
+    <Content Include="Butterfly\.git\objects\39\3f93cea9cc595c0265e3d618ec2de374c3f530" />
+    <Content Include="Butterfly\.git\objects\39\49d7cc86d9500286817039af683b238664de67" />
+    <Content Include="Butterfly\.git\objects\39\934146ffdc3af1e17b83657576b2d21f3cbecd" />
+    <Content Include="Butterfly\.git\objects\3c\2669c74465123c225d860b72c465ba5f6b4dfc" />
+    <Content Include="Butterfly\.git\objects\3c\9ff877576aab6409a105383011853cec111bc7" />
+    <Content Include="Butterfly\.git\objects\3d\3296bc4d04266618e35c30c24d3a52734d8398" />
+    <Content Include="Butterfly\.git\objects\3e\4a515e5c6674fb20d526bc77041c5ad85de7a3" />
+    <Content Include="Butterfly\.git\objects\3f\5538227b60baf88a1298443f086a7f7b78eb09" />
+    <Content Include="Butterfly\.git\objects\40\9363c2680c7e5f86071f70133c0cd983bc7e35" />
+    <Content Include="Butterfly\.git\objects\41\129e47313eb9dbdd6a662280f0bc269f45ba2d" />
+    <Content Include="Butterfly\.git\objects\41\d4357a317438f04033183da8a3dfe8193f0a45" />
+    <Content Include="Butterfly\.git\objects\44\7cec2c47da7a30359729a36d3c5096dbde5a15" />
+    <Content Include="Butterfly\.git\objects\48\56cd7fa3092bbba0e03cc71f253fa2c7d74c7a" />
+    <Content Include="Butterfly\.git\objects\48\67c86bfd933e37bd9a883a15953118ae293ca8" />
+    <Content Include="Butterfly\.git\objects\49\b843b1947c3edbfd46010e7436d69a9d395a7c" />
+    <Content Include="Butterfly\.git\objects\4a\48c70fd15b0cd507f6d7c2d3baa644f41c0074" />
+    <Content Include="Butterfly\.git\objects\4b\27b5140dd6e4fd081a25feea12b0d829e350b5" />
+    <Content Include="Butterfly\.git\objects\4c\62cfa75e54018bafbb0c90d75641c143ced1a7" />
+    <Content Include="Butterfly\.git\objects\4d\43715223124fe313a1884b0aced70e220f4442" />
+    <Content Include="Butterfly\.git\objects\50\93fe8ca2c2c3743ea1e48fe7b01aba0454c1c2" />
+    <Content Include="Butterfly\.git\objects\50\a96d67084c3e937e3e86009ad4407aeceb28fd" />
+    <Content Include="Butterfly\.git\objects\50\d34056b72a3a664a0055e5c7dcd9f2b6ef2b10" />
+    <Content Include="Butterfly\.git\objects\51\204d27de92c7bb0f8bed6165b9dc888f38ff38" />
+    <Content Include="Butterfly\.git\objects\54\027e0bd60ad650a7c2659f2f7cb4dc1acf06b7" />
+    <Content Include="Butterfly\.git\objects\56\247e50b649a85632e785b18069355c0061ef3b" />
+    <Content Include="Butterfly\.git\objects\57\b2f1de2e0be3ba68bb4554141e465c16064a57" />
+    <Content Include="Butterfly\.git\objects\58\bb98363b8a4b2cb70474db0318904ca5fd48bd" />
+    <Content Include="Butterfly\.git\objects\5a\0f2db2cb21cdffc42c4d4dde00bba4af3a5e21" />
+    <Content Include="Butterfly\.git\objects\5a\3e2bae2ce2229a1e49ce0886e8869b182e9b3c" />
+    <Content Include="Butterfly\.git\objects\5e\581413b82e7b27b733710ecd1a9c71c07302f3" />
+    <Content Include="Butterfly\.git\objects\5f\e522b6d709706ef19f5d48109926709cb87699" />
+    <Content Include="Butterfly\.git\objects\61\74f4e025be14eb50454fe5a31d73cccb8bba65" />
+    <Content Include="Butterfly\.git\objects\62\25657c066b16c7244b3dac9612c91860c25d24" />
+    <Content Include="Butterfly\.git\objects\62\94dff3dfb3956b992065c7991d4083bc0b9d9b" />
+    <Content Include="Butterfly\.git\objects\63\05410923d611e3165b5e1f7c2cf625723d76dc" />
+    <Content Include="Butterfly\.git\objects\63\9a6dbfddba409c66824a8483740b98da9532d5" />
+    <Content Include="Butterfly\.git\objects\65\2c3eb66939748b8e734fabe6cee7033edcaa10" />
+    <Content Include="Butterfly\.git\objects\65\95cee4c281a61f18bbbe11983ca621f0f6da99" />
+    <Content Include="Butterfly\.git\objects\66\b86697b36f5b6a2fb018763ab0e667c149fd9a" />
+    <Content Include="Butterfly\.git\objects\67\2cbc2e625faf2402462ab85409ea2791984964" />
+    <Content Include="Butterfly\.git\objects\68\1f25c4ab72d272fe06dbdcd678f65cd9a07dd2" />
+    <Content Include="Butterfly\.git\objects\68\9b5b6b592e531e1330298ea4259644f0976f97" />
+    <Content Include="Butterfly\.git\objects\69\440cc7e431ed5b6f2b1fadb8376f551551d30c" />
+    <Content Include="Butterfly\.git\objects\6b\7d12fcb9a11e1aaee8d83901c21649ccfebb77" />
+    <Content Include="Butterfly\.git\objects\6b\8fcc0de870d19ef42fe4cfc468067d1f2a5e97" />
+    <Content Include="Butterfly\.git\objects\6d\ac048c2180fa9f1fcbf6996c40dcf24a9c4417" />
+    <Content Include="Butterfly\.git\objects\6e\0a86275293c8304edba8aee09be9547e9d1062" />
+    <Content Include="Butterfly\.git\objects\6e\58e99469e9bd3f39c7efa6eb4c4b6d097ded96" />
+    <Content Include="Butterfly\.git\objects\6e\9300c5235bb6eae6c4889b73b6bd5ce42b7d1d" />
+    <Content Include="Butterfly\.git\objects\6f\3a2913e199cebe9ace75cf7e5a2818da27fbd3" />
+    <Content Include="Butterfly\.git\objects\6f\c478f0e043330e0385289865965f2bd13c4757" />
+    <Content Include="Butterfly\.git\objects\75\3823c2729a6f23a5a05c2121b2c39676c161e6" />
+    <Content Include="Butterfly\.git\objects\76\41ef68b8080b9f7cdb836ddf01cedb702d1ff4" />
+    <Content Include="Butterfly\.git\objects\79\c35e4c9ca95d5c3f26fe1a9e03fab98fc6c2ad" />
+    <Content Include="Butterfly\.git\objects\7b\2660e072b50d913bbe42b1a96fce7669f66d6b" />
+    <Content Include="Butterfly\.git\objects\7c\a671cbef1d50fecff8a7e3cfae51ca60b7bac9" />
+    <Content Include="Butterfly\.git\objects\7e\2e26462948e3d0431bdf68adc47cf7ed1801ca" />
+    <Content Include="Butterfly\.git\objects\7e\3814f08c79fc59e7c1a6e0dace8723fc6cfda0" />
+    <Content Include="Butterfly\.git\objects\80\2b60d0a1e37b338b6ab25a37b7bd2546be27b0" />
+    <Content Include="Butterfly\.git\objects\80\8b81fd39e611facfebfaeb79cf1de2d57e3757" />
+    <Content Include="Butterfly\.git\objects\81\27f544003628261ce17f765b377b703fa60c6b" />
+    <Content Include="Butterfly\.git\objects\84\1e1d41c00b568b1c75852a523daa5d723bc9d4" />
+    <Content Include="Butterfly\.git\objects\84\3ebad88bb715732814f54f30550b59ee6ef840" />
+    <Content Include="Butterfly\.git\objects\84\76ba4250ea2f67c44c70ca56cfaff7a7bb8bfa" />
+    <Content Include="Butterfly\.git\objects\89\a5096812818155b7763e7a4bed9676c75fe768" />
+    <Content Include="Butterfly\.git\objects\8a\dbd7b0094a081fae0f2ee6ece5751dff278021" />
+    <Content Include="Butterfly\.git\objects\8c\38db72cecdd51cbee934110b19ee249a004bc5" />
+    <Content Include="Butterfly\.git\objects\8c\83b36f8e0a639495f4a5cdb482cccf11026e85" />
+    <Content Include="Butterfly\.git\objects\8d\3e5d0ea3b8ec35cfb8ee0135988874fb161c32" />
+    <Content Include="Butterfly\.git\objects\8d\f43cfcc3f0552c7ff49269dba8b94834406044" />
+    <Content Include="Butterfly\.git\objects\90\66be6fd265eb88291e42e77528e218f4b10eb9" />
+    <Content Include="Butterfly\.git\objects\90\ce798738d86c6e2f6736ef86896abe542eee7e" />
+    <Content Include="Butterfly\.git\objects\92\c4830216044ba21db9f4294b887312e80da38e" />
+    <Content Include="Butterfly\.git\objects\96\49a372287045a2da35420687839833ffa637b1" />
+    <Content Include="Butterfly\.git\objects\96\904fc3b275a77ebb5d5f0e4775bb2d9244219c" />
+    <Content Include="Butterfly\.git\objects\97\f7126d59b198296b6d1bc2d36cc5a19652d2da" />
+    <Content Include="Butterfly\.git\objects\98\a87052b8cb57d159dc8b342ae1e3d527dfcece" />
+    <Content Include="Butterfly\.git\objects\99\7908b5973ef49cdfc15588054983740ebce63d" />
+    <Content Include="Butterfly\.git\objects\99\944cc16c11ff271ed92f359cdfb85abdb8c510" />
+    <Content Include="Butterfly\.git\objects\99\b8898ab6f18bea461228c4887c47b365a167ff" />
+    <Content Include="Butterfly\.git\objects\99\d8cd9c9949b531e4765f9c39a203294ad3138e" />
+    <Content Include="Butterfly\.git\objects\9d\35dfc17c3ca93a0d7180b862291cba2fc6330e" />
+    <Content Include="Butterfly\.git\objects\9d\b22859fe1485450d6fa0a705c70f6cbe9d8603" />
+    <Content Include="Butterfly\.git\objects\9f\d3e1272586bac3608607feaeb509e9ff94c055" />
+    <Content Include="Butterfly\.git\objects\a0\db8b57a8db611e11a939692cda8f2685d889a3" />
+    <Content Include="Butterfly\.git\objects\a1\f9a1891ab1dca45f80a7dd35c53af94087aef1" />
+    <Content Include="Butterfly\.git\objects\a4\7b48fe564331a1f1b6ac7d8f903535fbd0aab9" />
+    <Content Include="Butterfly\.git\objects\a5\ad93e9ea3cafb2317dd01c742b503cae86621e" />
+    <Content Include="Butterfly\.git\objects\a7\7bdfb00e5937b85bd38821e1e4c16af0fa7124" />
+    <Content Include="Butterfly\.git\objects\a8\8ba8b7573f38ce272abd7f8b378de8d96584e8" />
+    <Content Include="Butterfly\.git\objects\aa\8035949c6988bca5ef2eb24b4a9dff59441e78" />
+    <Content Include="Butterfly\.git\objects\aa\a63792780594bf3fcbe47ad6590a18d714a404" />
+    <Content Include="Butterfly\.git\objects\b1\da1a5ac85d70c10b4c6cf443043720b5efea05" />
+    <Content Include="Butterfly\.git\objects\b2\af58cacb80b947eb58fb73b736b0f1cac4789c" />
+    <Content Include="Butterfly\.git\objects\b4\12afc32c32cfd27870dd2fa4d516af075990c6" />
+    <Content Include="Butterfly\.git\objects\b5\e980b700f4d27b661e09063437863faa26991d" />
+    <Content Include="Butterfly\.git\objects\b7\ab57f2adb13f01d8ebbb1c37f022494db7e0c0" />
+    <Content Include="Butterfly\.git\objects\b9\251c004f9d604b413b62377bf861cb0049f186" />
+    <Content Include="Butterfly\.git\objects\bb\ef32299437fcc63eb93cf2ef8a63a88f117331" />
+    <Content Include="Butterfly\.git\objects\bc\84a5fe32367db6c34ea8a0ec2273fdfa1e9747" />
+    <Content Include="Butterfly\.git\objects\be\d91250ec7e7920e400206d77ce77c3333a52a3" />
+    <Content Include="Butterfly\.git\objects\c4\11601aa8fe52c7aa41b4bece384a4a1ba17b9c" />
+    <Content Include="Butterfly\.git\objects\c5\73a34463763631ad17e6eda0ccbdfa388a6789" />
+    <Content Include="Butterfly\.git\objects\c7\290171b7236fdacae12b14d533858df8bece35" />
+    <Content Include="Butterfly\.git\objects\c8\d60f2e5078862706282ae3b5a71bd761f20c1e" />
+    <Content Include="Butterfly\.git\objects\ca\8dfc70ec3755655727fd4f25b4044f0964decf" />
+    <Content Include="Butterfly\.git\objects\cb\0a6411d9c46067a63cdc58b03c846fe5f9f600" />
+    <Content Include="Butterfly\.git\objects\ce\99ec1966147d246588ebacb74ead3451318a7a" />
+    <Content Include="Butterfly\.git\objects\cf\84417f58e3f2e8864c5cb4f29da84d518283b9" />
+    <Content Include="Butterfly\.git\objects\d0\ec3918acbab84343c0640e35d13070576f70d5" />
+    <Content Include="Butterfly\.git\objects\d1\8cadaee5f944f124984ad3b2895276c11dc275" />
+    <Content Include="Butterfly\.git\objects\d2\60d29cbfc6535e1ca2918b1656cbaed05e3016" />
+    <Content Include="Butterfly\.git\objects\d2\6952b55e1d20e4d2f64ff111d3060226a00212" />
+    <Content Include="Butterfly\.git\objects\d2\f77dd019635050ba9493331527a5b147af02cd" />
+    <Content Include="Butterfly\.git\objects\d5\dc5ea1f632023ca90e6941452e30d003ad4dcb" />
+    <Content Include="Butterfly\.git\objects\d7\52fd5d71545548fb0baf3f3a1b500e13e520b9" />
+    <Content Include="Butterfly\.git\objects\d8\d044e6f85e0da396109e7c122da6710abeeaa4" />
+    <Content Include="Butterfly\.git\objects\da\dd6dcac4f7f4a631e924a012bbe3996f40ce7d" />
+    <Content Include="Butterfly\.git\objects\db\08d804afd96f50eb399c4cf47f78707d1a1150" />
+    <Content Include="Butterfly\.git\objects\db\98f454778816ccfc3f4c6879ff59dbc667aab6" />
+    <Content Include="Butterfly\.git\objects\db\9ea7308dc835b47cf623158938e1436bce9360" />
+    <Content Include="Butterfly\.git\objects\dd\41dce090679754fc736a887afa47941789f201" />
+    <Content Include="Butterfly\.git\objects\dd\ccc2e258077718401c2e454a4e764361e79ffa" />
+    <Content Include="Butterfly\.git\objects\e1\171b8989041664ef3aaed1e4a878e53fd9cb3e" />
+    <Content Include="Butterfly\.git\objects\e3\a59e3a1c3cd659a3475fe4128e7da427c5c223" />
+    <Content Include="Butterfly\.git\objects\e4\774804709fac4ef1307dbbbd37c7553407e0ed" />
+    <Content Include="Butterfly\.git\objects\e4\f616d517a005e959da03be5badacb9f1f69815" />
+    <Content Include="Butterfly\.git\objects\e6\cb5e83e40a953123a3b1894369070b2d11083b" />
+    <Content Include="Butterfly\.git\objects\ea\5c018f43141f93a1faf4f48bb160c939124220" />
+    <Content Include="Butterfly\.git\objects\ed\39ac526af16964dd7f9d56a9b5da4aa3530b8e" />
+    <Content Include="Butterfly\.git\objects\ee\39245d7145f749a25a0dd46fb58b5281ec7db7" />
+    <Content Include="Butterfly\.git\objects\ef\bd909533b13e51e69d86bc8bddee10e4f4fe26" />
+    <Content Include="Butterfly\.git\objects\f0\50dd810a8b7f534fb67b2498e3287091ee41ed" />
+    <Content Include="Butterfly\.git\objects\f7\6c455e883eb88ad65ae0ca3094ead27ecf985f" />
+    <Content Include="Butterfly\.git\objects\fb\ccf15546673f019dc0702112dfa9e26df45860" />
+    <Content Include="Butterfly\.git\objects\fd\e00718fcfb288631534d682fbe156d8e31b130" />
+    <Content Include="Butterfly\.git\objects\fe\2552beb2670f7ce590f45a7a0424e208ff3be7" />
+    <Content Include="Butterfly\.git\refs\heads\main" />
+    <Content Include="Butterfly\.vscode\settings.json" />
+    <Content Include="Butterfly\.vs\Butterfly\config\applicationhost.config" />
+    <Content Include="Butterfly\.vs\Butterfly\FileContentIndex\6167bd9f-f6b9-4e7e-a5a9-fd6ed2980e7e.vsidx" />
+    <Content Include="Butterfly\.vs\Butterfly\FileContentIndex\read.lock" />
+    <Content Include="Butterfly\.vs\Butterfly\v17\.wsuo" />
+    <Content Include="Butterfly\.vs\slnx.sqlite" />
+    <Content Include="Butterfly\.vs\VSWorkspaceState.json" />
+    <Content Include="Butterfly\assets\vendor\bootstrap-icons\bootstrap-icons.json" />
+    <Content Include="Butterfly\assets\vendor\bootstrap-icons\bootstrap-icons.scss" />
+    <Content Include="Butterfly\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff" />
+    <Content Include="Butterfly\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff2" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-utilities.css.map" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-utilities.min.css.map" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap.rtl.css.map" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\css\bootstrap.rtl.min.css.map" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\js\bootstrap.esm.js.map" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\js\bootstrap.esm.min.js.map" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Butterfly\assets\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Butterfly\assets\vendor\boxicons\fonts\boxicons.eot" />
+    <Content Include="Butterfly\assets\vendor\boxicons\fonts\boxicons.ttf" />
+    <Content Include="Butterfly\assets\vendor\boxicons\fonts\boxicons.woff" />
+    <Content Include="Butterfly\assets\vendor\boxicons\fonts\boxicons.woff2" />
+    <Content Include="Butterfly\assets\vendor\purecounter\purecounter_vanilla.js.map" />
+    <Content Include="Butterfly\assets\vendor\swiper\swiper-bundle.min.js.map" />
+    <Content Include="Butterfly\forms\contact.php" />
+    <None Include=".editorconfig" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
+    <Content Include="Views\User\UserProfile.cshtml" />
+    <Content Include="Views\User\AdminProfile.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Butterfly\.git\objects\info\" />
+    <Folder Include="Butterfly\.git\objects\pack\" />
+    <Folder Include="Butterfly\.git\refs\tags\" />
+    <Folder Include="Butterfly\.vs\Butterfly\FileContentIndex\merges\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55012</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44375/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

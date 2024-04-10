@@ -1,0 +1,33 @@
+﻿@model IEnumerable<project_vidhi.Models.LoginAuthentication>
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<center>
+    <h3>List of users</h3>
+</center>
+<h2>Details</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+    </tr>
+
+@foreach (var item in Model) { 
+    <tr>
+        <td>
+            @Html.DisplayFor(model => item.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+    </tr>
+}
+
+</table>
